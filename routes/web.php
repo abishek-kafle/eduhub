@@ -15,12 +15,17 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'App\Http\Controllers\FrontController@index');
+Route::get('/abouts', 'App\Http\Controllers\FrontController@about');
+Route::get('/courses', 'App\Http\Controllers\FrontController@course');
+Route::get('/blogs', 'App\Http\Controllers\FrontController@blog');
+Route::get('/events', 'App\Http\Controllers\FrontController@event');
+Route::get('/standards', 'App\Http\Controllers\FrontController@standard');
+Route::get('/contacts', 'App\Http\Controllers\FrontController@contact');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('image', 'App\Http\Controllers\Admin\ImageController');
 Route::resource('about', 'App\Http\Controllers\Admin\AboutsController');
 Route::resource('class', 'App\Http\Controllers\Admin\ClassController');
 Route::resource('course', 'App\Http\Controllers\Admin\CourseController');
