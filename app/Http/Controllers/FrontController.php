@@ -21,15 +21,15 @@ class FrontController extends Controller
     }
 
     public function course(){
-        return view('course');
+        return view('courses');
     }
 
     public function blog(){
-        return view('blog');
+        return view('blogs');
     }
 
     public function event(){
-        return view('event');
+        return view('events');
     }
 
     public function standard(){
