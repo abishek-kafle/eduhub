@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Mentor Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>EduHub</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -32,13 +30,13 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">Mentor</a></h1>
+      <h1 class="logo mr-auto"><a href="/">EduHub</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="{{url('abouts')}}">About</a></li>
           <li><a href="{{url('courses')}}">Courses</a></li>
           <li><a href="{{url('blogs')}}">Blogs</a></li>
@@ -66,7 +64,8 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="registration" class="get-started-btn">Register</a>
+      <a href="{{url('reg')}}" class="get-started-btn">Register</a>
+
 
     </div>
   </header><!-- End Header -->
@@ -132,7 +131,7 @@
           &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="#">Self</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

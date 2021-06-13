@@ -39,4 +39,22 @@ class FrontController extends Controller
     public function contact(){
         return view('contact');
     }
+
+    public function registration(){
+        return view('register');
+    }
+
+    public function register_member(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required|unique:members,email'
+        ]);
+
+        $member = new Member();
+        $member->name = $request->input('name');
+        $member->email = $request->input('email');
+        $member->save();
+
+        return redirect('/')->with('status','Thank you for Registering.');
+    }
 }

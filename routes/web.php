@@ -21,6 +21,8 @@ Route::get('/blogs', 'App\Http\Controllers\FrontController@blog');
 Route::get('/events', 'App\Http\Controllers\FrontController@event');
 Route::get('/standards', 'App\Http\Controllers\FrontController@standard');
 Route::get('/contacts', 'App\Http\Controllers\FrontController@contact');
+Route::get('reg', 'App\Http\Controllers\FrontController@registration');
+Route::post('reg', 'App\Http\Controllers\FrontController@register_member');
 
 Auth::routes();
 
