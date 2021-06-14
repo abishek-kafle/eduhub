@@ -27,11 +27,23 @@ class FrontController extends Controller
     }
 
     public function blog(){
-        return view('blogs');
+        $blogs = Blog::orderBy('id','desc')->get();
+        return view('blogs')->with('blogs',$blogs);
+    }
+
+    public function viewblog($id){
+        $blog = Blog::find($id);
+        return view('blogdetail')->with('blog',$blog);
     }
 
     public function event(){
-        return view('events');
+        $events = Event::orderBy('id','desc')->get();
+        return view('events')->with('events', $events);
+    }
+
+    public function viewevent($id){
+        $event = Event::find($id);
+        return view('eventdetail')->with('event',$event);
     }
 
     public function standard(){

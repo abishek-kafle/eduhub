@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,9 @@ Route::get('/', 'App\Http\Controllers\FrontController@index');
 Route::get('/abouts', 'App\Http\Controllers\FrontController@about');
 Route::get('/courses', 'App\Http\Controllers\FrontController@course');
 Route::get('/blogs', 'App\Http\Controllers\FrontController@blog');
+Route::get('blogs/{id}', [FrontController::class, 'viewblog']);
 Route::get('/events', 'App\Http\Controllers\FrontController@event');
+Route::get('events/{id}', [FrontController::class, 'viewevent']);
 Route::get('/standards', 'App\Http\Controllers\FrontController@standard');
 Route::get('/contacts', 'App\Http\Controllers\FrontController@contact');
 Route::get('reg', 'App\Http\Controllers\FrontController@registration');
