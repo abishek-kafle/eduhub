@@ -17,7 +17,9 @@ class FrontController extends Controller
     }
 
     public function about(){
-        return view('about');
+        $about = About::orderBy('id','desc')->first();
+        //dd($about);
+        return view('about')->with('about',$about);
     }
 
     public function course(){
