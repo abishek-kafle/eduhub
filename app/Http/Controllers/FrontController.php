@@ -22,8 +22,10 @@ class FrontController extends Controller
         return view('about')->with('about',$about);
     }
 
-    public function course(){
-        return view('courses');
+    public function course($name){
+        $courses = Course::orderBy('id','desc')->where('class','=', $name)->get();
+        //dd($courses);
+        return view('courses')->with('courses', $courses);
     }
 
     public function blog(){
@@ -47,7 +49,8 @@ class FrontController extends Controller
     }
 
     public function standard(){
-        return view('standard');
+        $standards = Standard::all();
+        return view('standards')->with('standards',$standards);
     }
 
     public function contact(){

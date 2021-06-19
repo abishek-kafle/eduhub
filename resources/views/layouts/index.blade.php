@@ -38,7 +38,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="{{url('abouts')}}">About</a></li>
-          <li><a href="{{url('courses')}}">Courses</a></li>
+          <li><a href="{{url('standards')}}">Classes</a></li>
           <li><a href="{{url('blogs')}}">Blogs</a></li>
           <li><a href="{{url('events')}}">Events</a></li>
           {{-- <li><a href="pricing.html">Pricing</a></li>
@@ -59,7 +59,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> --}}
-          <li><a href="{{url('contacts')}}">Contact</a></li>
+          {{-- <li><a href="{{url('contacts')}}">Contact</a></li> --}}
 
         </ul>
       </nav><!-- .nav-menu -->

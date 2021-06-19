@@ -6,7 +6,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
-        <h2>Subjects</h2>
+        <h2>Classes</h2>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -17,10 +17,10 @@
             <h2><br></h2>
         </div>
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            @foreach ($courses as $course)
+            @foreach ($standards as $standard)
             <div class="col-lg-3 col-md-4">
                 <div class="icon-box">
-                  <h3><a href="">{{$course->name}}</a></h3>
+                  <h3><a href="{{url('courses',$standard->name)}}">{{$standard->name}}</a></h3>
                 </div>
             </div>
             @endforeach
