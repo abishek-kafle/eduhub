@@ -9,11 +9,23 @@ use App\Models\Member;
 use App\Models\Standard;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FrontController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $blogs = Blog::orderBy('id','desc')->get();
+        $courses = Course::orderBy('id','desc')->get();
+        $standards = Standard::orderBy('id','desc')->get();
+        $about = About::orderBy('id','desc')->first();
+        $events = Event::orderBy('id','desc')->get();
+        return view('welcome')->with([
+            'blogs'=>$blogs,
+            'courses'=>$courses,
+            'standards'=>$standards,
+            'about'=>$about,
+            'events'=>$events
+        ]);
     }
 
     public function about(){
@@ -27,6 +39,12 @@ class FrontController extends Controller
         //dd($courses);
         return view('courses')->with('courses', $courses);
     }
+
+    // public function downloadpdf(Request $request,$name){
+    //     $url = Storage::path($name);
+    //     //dd($url);
+    //     return response()->download($url,$name);
+    // }
 
     public function blog(){
         $blogs = Blog::orderBy('id','desc')->get();

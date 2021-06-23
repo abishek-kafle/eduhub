@@ -35,7 +35,7 @@
                     <label for="message-text" class="col-form-label">File</label>
                     <p>Old file : {{$course->link}}</p>
                     <input type="hidden" value="{{$course->link}}" name="oldfile">
-                    <input type="file" class="form-control" id="message-text" name="file">
+                    <input type="text" class="form-control" id="message-text" name="file">
                   </div>
 
                   <div class="form-group">

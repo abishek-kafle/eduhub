@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: #5fcf80;
+  background: #68756c;
   color: #fff;
   transition: all 0.4s;
 }
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: #5fcf80;
+  color: #68756c;
 }
 
 #header .logo img {
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 22px;
-  background: #5fcf80;
+  background: #68756c;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -526,7 +526,7 @@ section {
 .breadcrumbs {
   margin-top: 73px;
   text-align: center;
-  background: #5fcf80;
+  background: #68756c;
   padding: 30px 0;
   color: #fff;
 }
@@ -567,11 +567,11 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #5fcf80;
+  color: #68756c;
 }
 
 .about .content .learn-more-btn {
-  background: #5fcf80;
+  background: #68756c;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px 9px 25px;
@@ -582,7 +582,7 @@ section {
 }
 
 .about .content .learn-more-btn:hover {
-  background: #3ac162;
+  background: #68756c;
   color: #fff;
 }
 
@@ -603,7 +603,7 @@ section {
 .counts .counters span {
   font-size: 48px;
   display: block;
-  color: #5fcf80;
+  color: #68756c;
   font-weight: 700;
 }
 
@@ -621,7 +621,7 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 30px;
-  background: #5fcf80;
+  background: #68756c;
   border-radius: 4px;
   color: #fff;
 }
@@ -665,7 +665,7 @@ section {
 .why-us .icon-boxes .icon-box i {
   font-size: 32px;
   padding: 18px;
-  color: #5fcf80;
+  color: #68756c;
   margin-bottom: 30px;
   background: #ecf9f0;
   border-radius: 50px;
@@ -757,7 +757,7 @@ section {
 
 .courses .course-content h4 {
   font-size: 14px;
-  background: #5fcf80;
+  background: #68756c;
   padding: 7px 14px;
   color: #fff;
   margin: 0;
@@ -839,7 +839,7 @@ section {
 }
 
 .trainers .member .social a:hover {
-  color: #5fcf80;
+  color: #68756c;
 }
 
 .trainers .member .social i {
@@ -1205,7 +1205,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #5fcf80;
+  background: #68756c;
   display: inline-block;
   padding: 8px 35px;
   border-radius: 50px;
@@ -1533,7 +1533,7 @@ section {
 }
 
 #footer .credits a {
-  color: #3ac162;
+  color: #68756c;
   transition: 0.3s;
 }
 
@@ -1544,7 +1544,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5fcf80;
+  background: #68756c;
   color: #fff;
   line-height: 1;
   padding: 8px 0;

@@ -19,6 +19,7 @@ Route::get('/', 'App\Http\Controllers\FrontController@index');
 Route::get('/abouts', 'App\Http\Controllers\FrontController@about');
 // Route::get('courses/{$name}', 'App\Http\Controllers\FrontController@course');
 Route::get('courses/{name}', [FrontController::class, 'course']);
+// Route::post('downloadpdf/{name}', [FrontController::class, 'downloadpdf']);
 Route::get('/blogs', 'App\Http\Controllers\FrontController@blog');
 Route::get('blogs/{id}', [FrontController::class, 'viewblog']);
 Route::get('/events', 'App\Http\Controllers\FrontController@event');

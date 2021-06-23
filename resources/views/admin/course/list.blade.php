@@ -21,7 +21,7 @@
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">File</label>
-                    <input type="file" class="form-control" id="message-text" name="file">
+                    <input type="text" class="form-control" id="message-text" name="file">
                   </div>
 
                   <div class="form-group">

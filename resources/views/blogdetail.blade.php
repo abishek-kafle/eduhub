@@ -13,10 +13,10 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-12 col-md-6">
                 <div class="box">
                     <h3>{{$blog->title}}</h3>
-                    <p>{{$blog->description}}</p>
+                    <p>{!!$blog->description!!}</p>
                     <hr>
                     <p>BY : {{$blog->author}}</p>
                 </div>

@@ -13,10 +13,10 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-12 col-md-6">
                 <div class="box">
                     <h3>{{$event->title}}</h3>
-                    <p>{{$event->description}}</p>
+                    <p>{!!$event->description!!}</p>
                     <hr>
                     <p>Date : {{$event->date}}</p>
                 </div>

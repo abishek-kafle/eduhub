@@ -22,9 +22,10 @@
                     <div class="card-body">
                         <h5 class="card-title"><a href="events/{{$event->id}}">{{$event->title}}</a></h5>
                         <p class="font-italic text-center">{{$event->date}}</p>
-                        <p class="card-text">{{$event->description}}</p>
+                        <p class="card-text">{!!substr($event->description,0,200).".........."!!}</p>
                     </div>
                 </div>
+                <br>
             </div>
             @endforeach
         </div>

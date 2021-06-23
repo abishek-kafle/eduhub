@@ -20,7 +20,11 @@
             @foreach ($courses as $course)
             <div class="col-lg-3 col-md-4">
                 <div class="icon-box">
-                  <h3><a href="">{{$course->name}}</a></h3>
+                    <div class="form-group">
+                        <h3>{{$course->name}}</h3>
+                        <hr>
+                        <a href="{{$course->link}}" class="btn btn-primary">Download</a>
+                    </div>
                 </div>
             </div>
             @endforeach

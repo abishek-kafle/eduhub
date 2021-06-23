@@ -18,7 +18,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="box">
                         <h3>{{$blog->title}}</h3>
-                        <p>{{$blog->description}}</p>
+                        <p>{!!substr($blog->description,0,300)."............"!!}</p>
                         <div class="btn-wrap">
                             <a href="/blogs/{{$blog->id}}" class="btn-buy">Read More</a>
                         </div>

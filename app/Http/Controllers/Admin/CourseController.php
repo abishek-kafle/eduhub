@@ -46,24 +46,24 @@ class CourseController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
-            'file' => 'required|mimes:pdf,doc',
+            'file' => 'required',
             'class' => 'required'
         ]);
 
-        if($request -> hasFile('file')){
-            $filenamewithext = $request->file('file')->getClientOriginalName();
-            $filename = pathinfo($filenamewithext,PATHINFO_FILENAME);
-            $extension = $request->file('file')->getClientOriginalExtension();
-            $filenametostore = $filename.'.'.$extension;
-            $path = $request->file('file')->storeAs('public/file',$filenametostore);
-        }else{
-            $filenametostore = 'noimage.jpg';
-        }
+        // if($request -> hasFile('file')){
+        //     $filenamewithext = $request->file('file')->getClientOriginalName();
+        //     $filename = pathinfo($filenamewithext,PATHINFO_FILENAME);
+        //     $extension = $request->file('file')->getClientOriginalExtension();
+        //     $filenametostore = $filename.'.'.$extension;
+        //     $path = $request->file('file')->storeAs('public/file',$filenametostore);
+        // }else{
+        //     $filenametostore = 'noimage.jpg';
+        // }
 
         $course = new Course();
         $course->name = $request->input('name');
         $course->description = $request->input('description');
-        $course->link = $filenametostore;
+        $course->link = $request->input('file');
         $course->class = $request->input('class');
         $course->save();
         return redirect('course')->with('status','Record added Successfully !!');
@@ -105,24 +105,24 @@ class CourseController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'description' => 'required',
-            'file' => 'nullable|mimes:pdf,doc',
+            'file' => 'nullable',
             'class' => 'required'
         ]);
 
-        if($request -> hasFile('file')){
-            $filenamewithext = $request->file('file')->getClientOriginalName();
-            $filename = pathinfo($filenamewithext,PATHINFO_FILENAME);
-            $extension = $request->file('file')->getClientOriginalExtension();
-            $filenametostore = $filename.'.'.$extension;
-            $path = $request->file('file')->storeAs('public/file',$filenametostore);
-        }else{
-            $filenametostore = $request->input('oldfile');
-        }
+        // if($request -> hasFile('file')){
+        //     $filenamewithext = $request->file('file')->getClientOriginalName();
+        //     $filename = pathinfo($filenamewithext,PATHINFO_FILENAME);
+        //     $extension = $request->file('file')->getClientOriginalExtension();
+        //     $filenametostore = $filename.'.'.$extension;
+        //     $path = $request->file('file')->storeAs('public/file',$filenametostore);
+        // }else{
+        //     $filenametostore = $request->input('oldfile');
+        // }
 
         $course = Course::find($id);
         $course->name = $request->input('name');
         $course->description = $request->input('description');
-        $course->link = $filenametostore;
+        $course->link = $request->input('file');
         $course->class = $request->input('class');
         $course->save();
         return redirect('course')->with('status','Record updated Successfully !!');
